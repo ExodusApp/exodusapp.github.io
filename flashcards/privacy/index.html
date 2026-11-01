@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Flashcards privacy policy | Exodus</title>
+<style>
+  :root { color-scheme: light dark; }
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: system-ui, sans-serif; font-size: 1rem; line-height: 1.65; background: #fff; color: #202124; }
+  main { max-width: 48rem; margin: 0 auto; padding: 2rem 1.25rem 3rem; overflow-wrap: anywhere; }
+  h1, h2 { line-height: 1.25; }
+  h1 { font-size: 2rem; }
+  h2 { margin-top: 2rem; font-size: 1.35rem; }
+  a { color: #174ea6; text-underline-offset: 0.15em; }
+  a:focus-visible { outline: 2px solid currentColor; outline-offset: 3px; }
+  @media (prefers-color-scheme: dark) {
+    body { background: #17181a; color: #ededed; }
+    a { color: #a8c7fa; }
+  }
+</style>
+</head>
+<body>
+<main>
+  <h1>Flashcards privacy policy</h1>
+  <p>Effective date: 1 November 2026.</p>
+  <p>Exodus makes Flashcards. Diego maintains this policy. Contact: <a href="mailto:exodus.factory@proton.me">exodus.factory@proton.me</a>.</p>
+
+  <h2>Your cards and device backup</h2>
+  <p>Your deck names, card text, images, review history and preferences are stored on your device. Flashcards has no account of its own and no cloud sync service. Card content and anything you type are never included in our counting events or sent to our purchase management service.</p>
+  <p>Your device's own backup can copy app data to your iCloud or Google account, according to your device backup settings. On iOS this includes the database, images and preferences, including the purchase service's identifier. On Android it includes the database and preferences, but excludes images. On Android, after a purchase, the purchase SDK also saves its anonymous customer identifier to Google Block Store with cloud backup so a restore on another phone can find the same customer. Backup retention is controlled by your account and its provider.</p>
+
+  <h2>Optional counting: Help us count</h2>
+  <p>Counting is off until you say yes on Help us count or turn it on in Settings. Declining does not change the app. You can turn it off in Settings. No counting events are sent before yes or after you turn it off; events recorded locally before yes may be sent after you agree, with their original calendar days.</p>
+  <p>We use PostHog Cloud EU to count five events: app_first_open, first_review_completed (a first completed review of your own cards), paywall_shown, purchase_completed and review_session_completed. The first four are sent once per install; completed review sessions are counted at most once a calendar day.</p>
+  <p>Each event includes the platform, store country, first-open calendar day, first-review calendar day when known, app version, interface language and experiment arm when one runs. Depending on the event it also includes the number of days since first open or first review, the paid extra that opened Paid extras, the plan bought, or whether the install has paid. It never includes deck names, card content, anything typed, an account, an install or device identifier, an advertising identifier, or a time finer than the day.</p>
+  <p>Each event has a new random identifier, used as both distinct_id and uuid, and its calendar day as timestamp. Requests set $process_person_profile to false and $geoip_disable to true: the engine keeps no person profile, discards the request's network address and adds no location from it. Events are sent by our own outbox and fetch code; there is no analytics SDK. We use the counts to understand first reviews, use of the extras, purchases and return to studying. The plan specifies one year of retention on the analytics free plan. Turning counting off stops future sending; it does not retract events already sent.</p>
+
+  <h2>Purchases and automatic purchase metadata</h2>
+  <p>Apple App Store or Google Play handles a purchase or restore through its own sheet and store account and holds its transaction record. The store is the merchant of record. The store controls retention of those records. Flashcards asks the store on the device for its storefront country at launch; no data of ours is sent for that question.</p>
+  <p>We use RevenueCat to manage paid access, restores, refunds and expired plans. This service works regardless of your Help us count answer. It is contacted when Paid extras opens or you tap Restore purchases, and at launch and on return to the app on an install that has tapped Buy or Restore; later refreshes follow the SDK's cache rules.</p>
+  <p>RevenueCat receives a random anonymous identifier for the install and store transaction records. With each request its SDK sends platform and OS version, device model (and brand on Android), app version and bundle identifier, preferred languages, store country, sandbox and debug flags, and the request's network address. On iPhones it also sends the device vendor identifier and tracking-permission status. The app never asks for tracking permission, so that status is not determined. We send no name, card content, app account or advertising identifier. Play Billing usage logging is disabled app-wide on Android by excluding its upload backend.</p>
+  <p>Purchase records also let the studio read revenue, renewals, cancellations, refunds and the mix of plans for every buyer, independently of optional counting. RevenueCat controls its retention; customer records can be deleted from its dashboard. The plan does not establish a fixed retention period or a deletion turnaround time for this service.</p>
+
+  <h2>Opening links</h2>
+  <p>Tapping Privacy, Terms or Manage subscription opens the studio's GitHub Pages site or the store's subscription page through your system browser or store app. That request goes to the site or store you open. The app keeps no records of those external requests.</p>
+
+  <h2>Questions and requests</h2>
+  <p>Write to <a href="mailto:exodus.factory@proton.me">exodus.factory@proton.me</a> about this policy or your data. Your cards live on your device and in any device backup you enabled; the studio does not hold a copy of those cards. Counting events do not share a stable identifier that links them to you. Purchase records have the purchase service's anonymous identifier and store records.</p>
+  <p><a href="https://exodusapp.github.io/flashcards/terms/">Terms of Use</a></p>
+</main>
+</body>
+</html>
